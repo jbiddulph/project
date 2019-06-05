@@ -35,7 +35,7 @@ class BlogController extends AbstractController
      * @Route("/post/{id}", name="blog_by_id", requirements={"id"="\d+"}, methods={"GET"})
      * @ParamConverter("post", class="App:BlogPost")
      */
-    public function post($post)
+    public function post(BlogPost$post)
     {
         // It's the same as doing find($id) on repository
         return $this->json($post);
